@@ -34,3 +34,12 @@ h1 {
 p {
     color: white;
 }
+
+button {
+    padding: 14px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: #f19321;
+}
