@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+.container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
 .front {
     background-image: url("images/feets.jpg");
     height: 100vh;
@@ -66,6 +73,14 @@ button {
     box-shadow: 4px 4px 12px 4px grey;
 }
 
+.cancel {
+    color: #f19321;
+    font-size: 24px;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
 #holder {
     padding: 10px;
     border: 1px solid #f19321;
@@ -79,4 +94,8 @@ h3 {
 
 input {
     color: #f19321;
+}
+
+.display {
+    display: none;
 }
