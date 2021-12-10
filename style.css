@@ -75,15 +75,11 @@ button:hover {
     position: relative;
     padding: 120px 10px 120px 10px;
     left: 20rem;
-    top: 12rem;
+    top: 10rem;
     line-height: 26px;
     border-radius: 30px;
     background: transparent;
     box-shadow: 4px 4px 12px 4px black;
-}
-
-.info:hover {
-    width: 65%;
 }
 
 .cancel {
@@ -115,4 +111,8 @@ label {
 
 .display {
     display: none;
+}
+
+.logins p {
+    padding: 15px
 }
