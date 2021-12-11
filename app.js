@@ -37,7 +37,7 @@ form.addEventListener("submit", function(e) {
     console.log(birthYear.value);
     console.log(birthMonth.value);
     console.log(birthDate.value);
-    console.log(gender.value)
+    console.log(gender.value.checked)
 
     validation();
     generate();
@@ -57,7 +57,7 @@ function validation() {
     } else if (birthMonth.value <= 0 || birthMonth.value > 12) {
         alert("Invalid Month")
     }
-    if (gender.value == false) {
+    if (gender.value.checked == undefined) {
         alert("Please mark any of checkbox")
     }
 
