@@ -41,6 +41,7 @@ form.addEventListener("submit", function(e) {
 
     validation();
     generate();
+    output();
 
 })
 
@@ -109,7 +110,10 @@ function generate() {
 }
 
 function output() {
-    if (name == "female") {
+    if (document.getElementsById("female").checked) {
+        document.querySelector('h3').textContent = "Hello" + " " + maleAkanNames[index];
+        document.getElementById('output').textContent = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
+    } else if (document.getElementsById("male").checked) {
         document.querySelector('h3').textContent = "Hello" + " " + maleAkanNames[index];
         document.getElementById('output').textContent = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
     }
