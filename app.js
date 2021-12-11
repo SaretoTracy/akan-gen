@@ -21,7 +21,7 @@ const weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday
 const months = ["January", "Febuary", "March", "April", "June", "July", "August", "September", "October", "November", "December"];
 
 
-/**data collection */
+/**data collection input*/
 let form = document.querySelector(".form")
 let birthYear = document.querySelector(".year");
 let birthMonth = document.querySelector(".month");
@@ -45,7 +45,7 @@ form.addEventListener("submit", function(e) {
 
 })
 
-/**data collection input*/
+/**data collection input Validation*/
 function validation() {
     if (birthYear.value === null) {
         alert("Please enter Year")
@@ -84,8 +84,11 @@ function generate() {
     console.log(MM)
     let DD = (birthDate.value);
     console.log(DD)
+        /**performing the generation formula */
     let dayoftheWeek = Math.floor((((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7)
     console.log(dayoftheWeek)
+
+    /**getting exact day of birth */
     let day;
     if (dayoftheWeek == 0) {
         day = 6
