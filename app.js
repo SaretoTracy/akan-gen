@@ -106,14 +106,11 @@ function generate() {
     console.log(name)
 
 
-
 }
 
-
-/*
-    let output;
-    if (gender == "male" && validation()) {
+function output() {
+    if (name == "female") {
+        document.querySelector('h3').textContent = "Hello" + " " + maleAkanNames[index];
         document.getElementById('output').textContent = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
     }
-    console.log(output)
-}*/
+}
