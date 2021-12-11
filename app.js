@@ -26,9 +26,7 @@ let form = document.querySelector(".form")
 let birthYear = document.querySelector(".year");
 let birthMonth = document.querySelector(".month");
 let birthDate = document.querySelector(".date");
-let genderFemale = document.getElementById("female")
-let genderMale = document.getElementById("mae")
-
+let gender = document.getElementsByName("gender")
 
 
 
@@ -38,9 +36,8 @@ form.addEventListener("submit", function(e) {
     console.log(birthYear.value);
     console.log(birthMonth.value);
     console.log(birthDate.value);
-    console.log(gender.value.checked)
-    console.log(genderFemale.value.checked)
-    console.log(genderMale.value.checked)
+    console.log(gender.value)
+
 
     validation();
     generate();
@@ -58,9 +55,6 @@ function validation() {
         alert("please enter Month")
     } else if (birthMonth.value <= 0 || birthMonth.value > 12) {
         alert("Invalid Month")
-    }
-    if (gender.value.checked == undefined) {
-        alert("Please mark any of checkbox")
     }
 
     if (birthDate.value === null) {
@@ -102,8 +96,19 @@ function generate() {
         day = dayoftheWeek - 1
     }
 
-    console.log(weekDay[day])
+    console.log(weekDay[day]);
+
+    let name;
+    if (gender.checked) {
+        return gender.value;
+    }
+    name = gender.value;
+    console.log(name)
+
+
+
 }
+
 
 /*
     let output;
