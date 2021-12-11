@@ -116,3 +116,13 @@ label {
 .logins p {
     padding: 15px
 }
+
+.submit {
+    padding: 14px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    color: #E7C896;
+    background-color: #f19321;
+    transition: all 250ms ease-in-out;
+}
