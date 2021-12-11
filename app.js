@@ -22,6 +22,7 @@ const months = ["January, Febuary , March, April, June, July, August, September,
 
 
 /**data collection */
+let form = document.querySelector(".form")
 let birthYear = document.querySelector(".year");
 let birthMonth = document.querySelector(".month");
 let birthDate = document.querySelector(".date");
@@ -61,3 +62,8 @@ let CC = (Math.floor(birthYear / 100));
 let YY = parseInt(birthYear.slice(-2));
 let MM = [parseInt(birthMonth) - 1];
 let DD = parseInt(birthDate);
+
+
+form.addEventListener("submit", function() {
+
+})
