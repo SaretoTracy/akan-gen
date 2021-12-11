@@ -42,7 +42,6 @@ form.addEventListener("submit", function(e) {
     validation();
     generate();
     console.log(weekDay)
-    console.log(output)
 
 })
 
@@ -58,6 +57,10 @@ function validation() {
     } else if (birthMonth.value <= 0 || birthMonth.value > 12) {
         alert("Invalid Month")
     }
+    if (gender.value == false) {
+        alert("Please mark any of checkbox")
+    }
+
     if (birthDate.value === null) {
         alert("please enter birthDate")
     } else if (birthDate.value <= 0 || birthDate.value >= 32) {
@@ -98,11 +101,12 @@ function generate() {
     }
 
     console.log(weekDay[day])
+}
 
-
+/*
     let output;
     if (gender == "male" && validation()) {
         document.getElementById('output').textContent = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
     }
     console.log(output)
-}
+}*/
