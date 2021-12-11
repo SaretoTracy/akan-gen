@@ -102,12 +102,11 @@ function generate() {
 
     let name;
     if (genderFemale.checked) {
-        console.log("female")
+        outcome.innerHTML = "You were born on a " + weekDay[day] + " , your Akan name is " + femaleNames[day];
     } else if (genderMale.checked) {
-        console.log("male")
-
+        outcome.innerHTML = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
     }
-    outcome.innerHTML = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
+
 
 
 
