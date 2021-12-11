@@ -86,7 +86,14 @@ function generate() {
     console.log(DD)
     let dayoftheWeek = Math.floor((((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7)
     console.log(dayoftheWeek)
+    let day;
+    if (dayoftheWeek == 0) {
+        day = 6
+    } else {
+        day = dayoftheWeek - 1
+    }
 
+    console.log(weekDay[day])
 
 
 }
