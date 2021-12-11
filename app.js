@@ -17,7 +17,7 @@ cancel_btn.addEventListener("click", () => {
 
 const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame "];
-const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "Febuary", "March", "April", "June", "July", "August", "September", "October", "November", "December"];
 
 
@@ -41,6 +41,7 @@ form.addEventListener("submit", function(e) {
 
     validation();
     generate();
+    console.log(weekDay)
 
 })
 
@@ -75,29 +76,17 @@ generate formula (Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26
 
 function generate() {
 
-    let CC = (Math.floor(birthYear.value / 100));
+    let CC = (birthYear.value.slice(0, 2));
     console.log(CC)
-    let YY = parseInt(birthYear.value.slice(2, 4));
+    let YY = (birthYear.value.slice(2, 4));
     console.log(YY)
-    let MM = [parseInt(birthMonth.value) - 1];
+    let MM = [(birthMonth.value)];
     console.log(MM)
-    let DD = parseInt(birthDate.value);
+    let DD = (birthDate.value);
     console.log(DD)
+    let dayoftheWeek = Math.floor((((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7)
+    console.log(dayoftheWeek)
 
-
-
-
-    // if ((((CC === 6 && YY === 0) || (YY % 4 === 0 && YY !== 0)) && ((birthMonth - 1) <= 1))) {
-    //     //leap year
-    //     dayOfBirthIndex = (MM + CC + DD - 1) % 7;
-
-    // } else {
-    //     //ordinary year
-    //     dayOfBirthIndex = (DD + MM + CC + YY + Math.floor(YY / 4)) % 7
-    // }
-
-
-    // console.log(dayOfBirthIndex)
 
 
 }
