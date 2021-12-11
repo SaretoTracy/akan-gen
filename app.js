@@ -27,6 +27,8 @@ let birthYear = document.querySelector(".year");
 let birthMonth = document.querySelector(".month");
 let birthDate = document.querySelector(".date");
 let gender = document.getElementById("gender")
+let genderFemale = document.getElementById("female")
+let genderMale = document.getElementById("mae")
 
 
 
@@ -38,10 +40,11 @@ form.addEventListener("submit", function(e) {
     console.log(birthMonth.value);
     console.log(birthDate.value);
     console.log(gender.value.checked)
+    console.log(genderFemale.value.checked)
+    console.log(genderMale.value.checked)
 
     validation();
     generate();
-    console.log(weekDay)
 
 })
 
