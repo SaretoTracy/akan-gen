@@ -70,17 +70,34 @@ function validation() {
     }
 }
 
-
 /**
 generate formula (Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7) */
+
 function generate() {
 
-    let CC = (Math.floor(birthYear / 100));
-    console.log("born" + birthYear.value)
+    let CC = (Math.floor(birthYear.value / 100));
+    console.log(CC)
     let YY = parseInt(birthYear.value.slice(2, 4));
-    console.log(YY);
-    let MM = [parseInt(birthMonth) - 1];
-    let DD = parseInt(birthDate);
+    console.log(YY)
+    let MM = [parseInt(birthMonth.value) - 1];
+    console.log(MM)
+    let DD = parseInt(birthDate.value);
+    console.log(DD)
+
+
+
+
+    // if ((((CC === 6 && YY === 0) || (YY % 4 === 0 && YY !== 0)) && ((birthMonth - 1) <= 1))) {
+    //     //leap year
+    //     dayOfBirthIndex = (MM + CC + DD - 1) % 7;
+
+    // } else {
+    //     //ordinary year
+    //     dayOfBirthIndex = (DD + MM + CC + YY + Math.floor(YY / 4)) % 7
+    // }
+
+
+    // console.log(dayOfBirthIndex)
+
 
 }
-Dayoftheweek(d) = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
