@@ -127,6 +127,6 @@ label {
     transition: all 250ms ease-in-out;
 }
 
-#output {
+#output p {
     color: #f19321;
 }
