@@ -26,8 +26,7 @@ let form = document.querySelector(".form")
 let birthYear = document.querySelector(".year");
 let birthMonth = document.querySelector(".month");
 let birthDate = document.querySelector(".date");
-let genderFemale = document.querySelector("#female");
-let genderMale = document.querySelector("#male");
+let gender = document.getElementById("gender")
 
 
 
@@ -38,10 +37,12 @@ form.addEventListener("submit", function(e) {
     console.log(birthYear.value);
     console.log(birthMonth.value);
     console.log(birthDate.value);
+    console.log(gender.value)
 
     validation();
     generate();
     console.log(weekDay)
+    console.log(output)
 
 })
 
@@ -99,4 +100,9 @@ function generate() {
     console.log(weekDay[day])
 
 
+    let output;
+    if (gender == "male" && validation()) {
+        document.getElementById('output').textContent = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
+    }
+    console.log(output)
 }
