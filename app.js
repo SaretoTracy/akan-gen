@@ -27,3 +27,22 @@ let birthMonth = document.querySelector(".month");
 let birthDate = document.querySelector(".date");
 let gender = document.querySelector("#gender");
 let generatebtn = document.querySelector("#generate_Btn")
+
+
+/**data collection input*/
+let dataInput = (birthYear, birthMonth, birthDate) => {
+        if (birthYear === null) {
+            alert("Please enter Year")
+        } else if (birthYear <= 0 || birthYear.length > 4) {
+            alert("Invalid Year")
+        }
+        if (birthMonth === null) {
+            alert("please enter Month")
+        } else if (birthMonth <= 0 || birthMonth > 12) {
+            alert("Invalid Month")
+        }
+        if (birthDate === null) {
+            alert("please enter birthDate")
+        } else if (birthDate <= 0 || birthDate >= 32) {
+            alert("Invalid Date")
+        }
