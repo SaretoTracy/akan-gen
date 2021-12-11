@@ -27,6 +27,9 @@ let birthYear = document.querySelector(".year");
 let birthMonth = document.querySelector(".month");
 let birthDate = document.querySelector(".date");
 let gender = document.getElementsByName("gender")
+let genderFemale = document.querySelector("#female")
+let genderMale = document.querySelector("#male")
+let outcome = document.getElementById("outcome");
 
 
 
@@ -41,7 +44,6 @@ form.addEventListener("submit", function(e) {
 
     validation();
     generate();
-    output();
 
 })
 
@@ -105,16 +107,6 @@ function generate() {
     }
     name = gender.value;
     console.log(name)
+    outcome.innerHTML = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
 
-
-}
-
-function output() {
-    if (document.getElementsById("female").checked) {
-        document.querySelector('h3').textContent = "Hello" + " " + maleAkanNames[index];
-        document.getElementById('output').textContent = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
-    } else if (document.getElementsById("male").checked) {
-        document.querySelector('h3').textContent = "Hello" + " " + maleAkanNames[index];
-        document.getElementById('output').textContent = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
-    }
 }
