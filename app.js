@@ -26,7 +26,6 @@ let form = document.querySelector(".form")
 let birthYear = document.querySelector(".year");
 let birthMonth = document.querySelector(".month");
 let birthDate = document.querySelector(".date");
-let gender = document.getElementById("gender")
 let genderFemale = document.getElementById("female")
 let genderMale = document.getElementById("mae")
 
