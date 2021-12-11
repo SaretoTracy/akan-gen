@@ -28,42 +28,47 @@ let birthMonth = document.querySelector(".month");
 let birthDate = document.querySelector(".date");
 let gender = document.querySelector("#gender");
 let generatebtn = document.querySelector("#generate_Btn")
+    /** 
 
-
-/**data collection input*/
+    /**data collection input*/
 let dataInput = (birthYear, birthMonth, birthDate) => {
-    if (birthYear === null) {
-        alert("Please enter Year")
-    } else if (birthYear <= 0 || birthYear.length > 4) {
-        alert("Invalid Year")
+        if (birthYear === null) {
+            alert("Please enter Year")
+        } else if (birthYear <= 0 || birthYear.length > 4) {
+            alert("Invalid Year")
+        }
+        if (birthMonth === null) {
+            alert("please enter Month")
+        } else if (birthMonth <= 0 || birthMonth > 12) {
+            alert("Invalid Month")
+        }
+        if (birthDate === null) {
+            alert("please enter birthDate")
+        } else if (birthDate <= 0 || birthDate >= 32) {
+            alert("Invalid Date")
+        }
+
     }
-    if (birthMonth === null) {
-        alert("please enter Month")
-    } else if (birthMonth <= 0 || birthMonth > 12) {
-        alert("Invalid Month")
+    /**
+    function getGender() {
+        if (gender.checked) {
+            return gender.value;
+        }
     }
-    if (birthDate === null) {
-        alert("please enter birthDate")
-    } else if (birthDate <= 0 || birthDate >= 32) {
-        alert("Invalid Date")
-    }
+    let genderInput = getGender();
+    generate formula (Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7) 
 
-}
+    let CC = (Math.floor(birthYear / 100));
+    let YY = parseInt(birthYear.slice(-2));
+    let MM = [parseInt(birthMonth) - 1];
+    let DD = parseInt(birthDate);
+    */
 
-function getGender() {
-    if (gender.checked) {
-        return gender.value;
-    }
-}
-let genderInput = getGender();
-/**generate formula (Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7) */
-
-let CC = (Math.floor(birthYear / 100));
-let YY = parseInt(birthYear.slice(-2));
-let MM = [parseInt(birthMonth) - 1];
-let DD = parseInt(birthDate);
-
-
-form.addEventListener("submit", function() {
+form.addEventListener("submit", function(e) {
+    e.preventDefault()
+    console.log(birthYear.value);
+    console.log(birthMonth.value);
+    console.log(birthDate.value);
+    console.log(gender);
 
 })
