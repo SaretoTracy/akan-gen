@@ -43,6 +43,7 @@ form.addEventListener("submit", function(e) {
 
 
 
+
     validation();
     generate();
 
