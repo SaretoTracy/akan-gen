@@ -6,11 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akan-Name-Generator</title>
+    <script src="https://kit.fontawesome.com/a70663aaec.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <script src="./app.js"></script>
+    <div class="container">
+
+        <div class="front">
+            <div class="content">
+                <h1>Akan Names</h1>
+                <p>Akan names are derived from Ghanian culture. Frequently in Ghana,<br> children are given their first name as a 'day name' which corresponds<br> to the day in the week they were born. We can help you generate your<br> Akan name by Calculating
+                    the day of the week <br> You were born and then depending on your gender</p>
+                <button id="generatebtn">Generate Akan Name</button>
+            </div>
+        </div>
+        <div class="next display" id="login">
+
+            <div class="info">
+                <i class="fa fa-times cancel"></i>
+                <a href="#login"><i class="fas fa-redo-alt redo"></i></a>
+
+                <h3>Fill out the form below and click the <br>generate name button to find out what your Akan name is.</h3>
+                <div class="logins">
+                    <form class="form">
+                        <label for="label">Year of Birth</label><br>
+                        <input type="number" placeholder="YYYY" id="holder" class="year"><br>
+
+                        <label for="label">Month of Birth</label><br>
+                        <input type="number" placeholder="MMM" id="holder" class="month"><br>
+
+                        <label for="label">Date of Birth</label><br>
+                        <input type="number" placeholder="DDD" id="holder" class="date"><br>
+                        <input type="radio" name="gender" id="female-check" value="Female">Female<span>  
+                        <input type="radio" name="gender" id="male-check" value="Male">Male</span><br>
+                        <input type="submit" value="submit" class="submit">
+                    </form>
+                    <p id="outcome"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js "></script>
 </body>
 
-</html>
+</htm
