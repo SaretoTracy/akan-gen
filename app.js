@@ -47,6 +47,7 @@ form.addEventListener("submit", function(e) {
     validation();
     generate();
 
+
 })
 
 /**data collection input Validation*/
@@ -76,33 +77,30 @@ function validation() {
     }
 }
 
-/**
-generate formula (Day of the week (d) = ( 
-    <div class="container">
 
-        <div class="front">( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7) */
 
 function generate() {
 
-    let CC = (birthYear.value.slice(0, 2));
+    let CC = parseInt(birthYear.value.slice(0, 2));
     console.log(CC)
-    let YY = (birthYear.value.slice(2, 4));
+    let YY = parseInt(birthYear.value.slice(2, 4));
     console.log(YY)
-    let MM = [(birthMonth.value)];
+    let MM = parseInt(birthMonth.value);
     console.log(MM)
-    let DD = (birthDate.value);
+    let DD = parseInt(birthDate.value);
     console.log(DD)
-        /**performing the generation formula */
-    let dayoftheWeek = Math.floor((((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7)
+
+    let dayoftheWeek = Math.floor((((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD)) % 7
+        // let dayoftheWeek = (DD + MM + CC + YY + Math.floor(YY / 4)) % 7
     console.log(dayoftheWeek)
 
     /**getting exact day of birth */
-    let day;
-    if (dayoftheWeek == 0) {
-        day = 6
-    } else {
-        day = dayoftheWeek - 1
-    }
+    let day = dayoftheWeek;
+    // if (dayoftheWeek == 0) {
+    //     day = 6
+    // } else {
+    //     day = dayoftheWeek 
+    // }
 
     console.log(weekDay[day]);
 
@@ -113,6 +111,7 @@ function generate() {
     } else if (genderMale.checked) {
         outcome.innerHTML = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
     }
+
 
 
 
