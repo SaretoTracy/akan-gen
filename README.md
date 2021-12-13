@@ -51,7 +51,7 @@ $ git clone https://github.com/SaretoTracy/Portfolio.git
 
 
 ## Show your support
-
+ 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
@@ -60,4 +60,5 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](LICENSE) licensed.
+This project is [MIT](LICENCE) licensed.
+ 
