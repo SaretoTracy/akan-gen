@@ -77,7 +77,10 @@ function validation() {
 }
 
 /**
-generate formula (Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7) */
+generate formula (Day of the week (d) = ( 
+    <div class="container">
+
+        <div class="front">( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7) */
 
 function generate() {
 
