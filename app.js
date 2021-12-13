@@ -106,13 +106,12 @@ function generate() {
 
     let name;
     if (genderFemale.checked) {
-        document.querySelector('h3').textContent = "Hello" + " " + femaleNames[day];
         outcome.innerHTML = "You were born on a " + weekDay[day] + " , your Akan name is " + femaleNames[day];
     } else if (genderMale.checked) {
         outcome.innerHTML = "You were born on a " + weekDay[day] + " , your Akan name is " + maleNames[day];
     }
 
-
+    document.getElementById("frm").reset()
 
 
 
