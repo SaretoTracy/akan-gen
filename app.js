@@ -95,12 +95,12 @@ function generate() {
     console.log(dayoftheWeek)
 
     /**getting exact day of birth */
-    let day = dayoftheWeek;
-    // if (dayoftheWeek == 0) {
-    //     day = 6
-    // } else {
-    //     day = dayoftheWeek 
-    // }
+    let day;
+    if (dayoftheWeek == 0) {
+        day = 6
+    } else {
+        day = dayoftheWeek - 1
+    }
 
     console.log(weekDay[day]);
 
