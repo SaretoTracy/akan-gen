@@ -99,11 +99,11 @@ function generate() {
     if (dayoftheWeek == 0) {
         day = 6
     } else {
-        day = dayoftheWeek - 1
+        day = Math.abs(dayoftheWeek - 1)
     }
 
     console.log(weekDay[day]);
-
+    /**Generating Day of birth and Akan name */
     let name;
     if (genderFemale.checked) {
         outcome.innerHTML = "You were born on a " + weekDay[day] + " , your Akan name is " + femaleNames[day];
